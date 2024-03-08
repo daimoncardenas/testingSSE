@@ -1,0 +1,8 @@
+<script type="text/javascript">
+    const eventSource = new EventSource('https://4510-181-61-88-200.ngrok-free.app/ai/sse');
+    eventSource.onmessage = ({ data }) => {
+        const message = document.createElement('li');
+        message.innerText = 'New message: ' + data;
+        document.body.appendChild(message);
+    }
+</script>
